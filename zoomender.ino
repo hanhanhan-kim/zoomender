@@ -1,4 +1,5 @@
-// Ends Zoom call and exits the Zoom program for any OS.
+// Ends Zoom call and exits the Zoom program for any OS.  
+
 
 # include "Keyboard.h"
 
@@ -7,7 +8,9 @@ const int end_zoom_win_pin = 3;
 const int end_zoom_lin_pin = 5;
 const int end_zoom_mac_pin = 7;
 
-int old_button_state = HIGH;
+int old_win_button_state = HIGH;
+int old_lin_button_state = HIGH;
+int old_mac_button_state = HIGH;
 
 
 // Pull-ups protect from floating noise:
@@ -26,17 +29,24 @@ void loop() {
     // Macro for killing Zoom on Windows:
     int win_button_state = digitalRead(end_zoom_win_pin);
     
-    if ((old_button_state != win_button_state) && 
+    if ((old_win_button_state != win_button_state) && 
     (win_button_state==LOW)) {
+
+//      Keyboard.print("TEST 3");
 
         // End Zoom call:        
         Keyboard.press(KEY_LEFT_ALT);
         Keyboard.press('q');
         Keyboard.releaseAll();
 
+        delay(200);
+
         Keyboard.press(KEY_TAB);
+        Keyboard.releaseAll();
         Keyboard.press(KEY_RETURN);
-        Keyboard.releaseAll(); 
+        Keyboard.releaseAll();
+
+        delay(200);
 
         // Exit Zoom:
         Keyboard.press(KEY_LEFT_ALT);
@@ -47,11 +57,15 @@ void loop() {
 
     }
 
+    old_win_button_state = win_button_state;
+    
     // Macro for killing Zoom on Linux:
     int lin_button_state = digitalRead(end_zoom_lin_pin);
     
-    if ((old_button_state != lin_button_state) && 
+    if ((old_lin_button_state != lin_button_state) && 
     (lin_button_state==LOW)) {
+
+//      Keyboard.print("TEST 5");
 
         // End Zoom call:
         Keyboard.press(KEY_LEFT_ALT);
@@ -70,10 +84,12 @@ void loop() {
 
     }
 
+    old_lin_button_state = lin_button_state;
+
     // Macro for killing Zoom on Mac: 
     int mac_button_state = digitalRead(end_zoom_mac_pin);
     
-    if ((old_button_state != mac_button_state) && 
+    if ((old_mac_button_state != mac_button_state) && 
     (mac_button_state==LOW)) {
 
         // End Zoom call:
@@ -92,13 +108,7 @@ void loop() {
         delay(500);
         
     }
-    
-    old_button_state = win_button_state;
-    old_button_state = lin_button_state;
-    old_button_state = mac_button_state;
+
+    old_mac_button_state = mac_button_state;
 
 } 
-
-
-
-              
