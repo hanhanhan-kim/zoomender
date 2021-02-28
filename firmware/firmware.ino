@@ -81,7 +81,7 @@ void loop() {
     (win_button_state == HIGH) && 
     (lin_button_state == HIGH) && 
     (mac_button_state == LOW)) {
-      
+
         // End Zoom call:
         Keyboard.press(KEY_LEFT_GUI);
         Keyboard.press('w');
@@ -95,8 +95,6 @@ void loop() {
         delay(500);
         
     }
-
-
 
     old_mac_button_state = mac_button_state;
 
