@@ -10,18 +10,22 @@ A simple plug-and-play device for ending Zoom calls—no software installation r
 
 In addition to standard electronics equipment and access to a 3D-printer:
 
-| Item                                                         | Price (USD) | Quantity | Source                                                       |
-| ------------------------------------------------------------ | ----------- | -------- | ------------------------------------------------------------ |
-| Arduino Pro Micro (I used a clone. So long as it has an ATmega 32U4 processor, it should be able to spoof a HID, no problem) | 17.49 / 3   | 1        | Amazon [ASIN B01MTU9GOB](https://www.amazon.com/HiLetgo-Atmega32U4-Bootloadered-Development-Microcontroller/dp/B01MTU9GOB/ref=sr_1_1_sspa?dchild=1&keywords=arduino+pro+micro&qid=1614562625&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyV1BVTFBUNEY2NjhHJmVuY3J5cHRlZElkPUEwMTk3NDQwM1RON1BNTkJSNjBGSyZlbmNyeXB0ZWRBZElkPUEwMzI5Nzg0MlpFV1c0TUtIVElGWSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=) |
-| big dome push-button (red)                                   | 11.95       | 1        | Sparkfun [COM-09181](https://www.sparkfun.com/products/9181) |
-| SP3T switch                                                  | 1.25        | 1        | DigiKey [450-1571-ND](https://www.digikey.com/en/products/detail/te-connectivity-alcoswitch-switches/1825255-8/1202283?s=N4IgTCBcDaICwFYAMBaAjAg7GlA7AJiALoC%2BQA) |
-| SPDT switch                                                  | 0.65        | 1        | DigiKey [EG1903-ND](https://www.digikey.com/en/products/detail/e-switch/EG1218/101726) |
+| Item                       | Price (USD) | Quantity | Source                                                       |
+| -------------------------- | ----------- | -------- | ------------------------------------------------------------ |
+| Arduino Pro Micro*         | 17.49 / 3   | 1        | Amazon <br />[ASIN B01MTU9GOB](https://www.amazon.com/HiLetgo-Atmega32U4-Bootloadered-Development-Microcontroller/dp/B01MTU9GOB/ref=sr_1_1_sspa?dchild=1&keywords=arduino+pro+micro&qid=1614562625&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyV1BVTFBUNEY2NjhHJmVuY3J5cHRlZElkPUEwMTk3NDQwM1RON1BNTkJSNjBGSyZlbmNyeXB0ZWRBZElkPUEwMzI5Nzg0MlpFV1c0TUtIVElGWSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=) |
+| big dome push-button (red) | 11.95       | 1        | Sparkfun <br />[COM-09181](https://www.sparkfun.com/products/9181) |
+| SP3T switch                | 1.25        | 1        | DigiKey <br />[450-1571-ND](https://www.digikey.com/en/products/detail/te-connectivity-alcoswitch-switches/1825255-8/1202283?s=N4IgTCBcDaICwFYAMBaAjAg7GlA7AJiALoC%2BQA) |
+| SPDT switch**              | 0.65        | 1        | DigiKey <br />[EG1903-ND](https://www.digikey.com/en/products/detail/e-switch/EG1218/101726) |
+
+**Note:* I used an Arduino Pro Micro clone, to cut down on price. So long as it has an ATmega 32U4 processor, it should be able to spoof a HID just as well as the real thing, no problem. 
+
+***Note*: The SPDT switch isn’t really necessary. It just controls the LED built into the push button. I understand some people have their computers near their bed, however, and so the option to turn off the LED is sometimes desirable. 
 
 ### Hook-Up
 
 #TODO: Attach schematic
 
-*Note*: The SPDT switch isn’t really necessary. It just controls the LED built into the push button. I understand some people have their computers near their bed, however, and so the option to turn off the LED is sometimes desirable. 
+
 
 ### Assembly
 
