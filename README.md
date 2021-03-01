@@ -21,23 +21,29 @@ In addition to standard electronics equipment and access to a 3D-printer:
 
 ***Note*: The SPDT switch isn’t really necessary. It just controls the LED built into the push button. I understand some people have their computers near their bed, however, and so the option to turn off the LED is sometimes desirable. 
 
-### Hook-Up
+### Circuit
 
-#TODO: Attach schematic
+A literal schematic is shown below. The exact GND pins that were used are depicted (not that it matters):
 
+![schematic](docs/schematic.png)
 
+A complementary photograph:
+
+![photo](docs/hook_up_photo.jpg)
 
 ### Assembly
 
-1. Print the `main.stl` and the `base.stl`. I used the default settings for PLA at 0.2 um layer height on my Prusa MK3S. 
+1. Print the [`main.stl`](/hardware/STLs/main.stl) and the [`base.stl`](/hardware/STLs/base.stl). I used the default settings for PLA at 0.2 um layer height on my Prusa MK3S. 
 2. Solder or crimp the connections together, as illustrated in the schematic. Making connections on the terminals of the small SPDT and SP3T switches can be a little tricky. I found that female crimp pins meant for 0.1” housing (like the kind you find on breadboard jumper cables) worked well, when combined with some solder. I then added some heat-shrink to prevent shorting the switch terminals. Alternatively, you can take a more professional approach.
-3. Press-fit the push-button, switches and Pro Micro into their respective slots of the main body. If your print settings weren’t quite up to par, don’t be afraid to use some epoxy or hot glue. On my printer, the attached `.gcode` worked well enough that I didn’t need adhesive support.
-4. Screw the base into the bottom of the main. 
+3. Press-fit the push-button, switches and Pro Micro into their respective slots of the main body. If your print settings were well tuned, the components should fit snugly, without complaints. Otherwise, don’t be afraid to use some epoxy or hot glue. 
+4. Screw the base into the bottom of the main, via the printed threads. 
+
+#TODO: Attach photograph
 
 ## Firmware
 
-Just upload the [`firmware.ino` file](/firmware/firmware.ino) via the Arduino IDE and you’re ready to go! 
+Just upload the [`firmware.ino`](/firmware/firmware.ino) file via the Arduino IDE and you’re ready to go! 
 
 ## Extensions
 
-A wireless Bluetooth version is very possible, but it adds to the price. We just need to replace the Arduino Pro Micro board with one that is Bluetooth-capable . Adafruit’s version of an ESP32 board ([SKU 3405](https://www.adafruit.com/product/3405)) supports both classic and low-energy Bluetooth connections, and can easily spoof a HID, when combined with [T-vK’s ESP32 BLE Keyboard library](https://github.com/T-vK/ESP32-BLE-Keyboard). It costs over three times that of a single Pro Micro clone, however. Cheaper ESP32 boards can be found on Amazon and AliExpress, but the Adafruit one is nice because when both the LiPo battery and the USB are connected, the board will automatically switch over to USB for power, while simultaneously charging the battery at 200 mA—the sort of behaviour we might expect out of a consumer-grade Bluetooth device. Simultaneous delivery of multiple power sources on cheaper ESP32 boards can damage the board, and in some cases, the host computer. I’ll update the repo with a Bluetooth alternative, sometime in the future. 
+A wireless Bluetooth version is very possible, but it adds to the price. We just need to replace the Arduino Pro Micro board with one that is Bluetooth-capable. Adafruit’s version of an ESP32 board ([SKU 3405](https://www.adafruit.com/product/3405)) supports both classic and low-energy Bluetooth connections, and can easily spoof a HID, when combined with [T-vK’s ESP32 BLE Keyboard library](https://github.com/T-vK/ESP32-BLE-Keyboard). It costs over three times that of a single Pro Micro clone, however. Cheaper ESP32 boards can be found on Amazon and AliExpress, but the Adafruit one is nice because when both the LiPo battery and the USB are connected, the board will automatically switch over to USB for power, while simultaneously charging the battery at 200 mA—the sort of behaviour we might expect out of a consumer-grade Bluetooth device. Simultaneous delivery of multiple power sources on cheaper ESP32 boards can damage the board, and in some cases, the host computer. I’ll update the repo with a Bluetooth alternative, sometime in the future. 
