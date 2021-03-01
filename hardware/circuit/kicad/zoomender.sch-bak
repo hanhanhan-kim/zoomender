@@ -1,0 +1,111 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "zoomender"
+Date ""
+Rev ""
+Comp ""
+Comment1 "Made without intention to generate PCB"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L SparkFun-Boards:SPARKFUN_PRO_MICRO B0
+U 1 1 603C9E27
+P 5750 3600
+F 0 "B0" H 5750 4510 45  0001 C CNN
+F 1 "ARDUINO_PRO_MICRO" H 5750 4320 45  0000 C CNN
+F 2 "SPARKFUN_PRO_MICRO" H 5750 4400 20  0001 C CNN
+F 3 "" H 5750 3600 50  0001 C CNN
+F 4 "XXX-00000" H 5750 4331 60  0001 C CNN "Field4"
+	1    5750 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SP3T DigiKey_450-1571-ND
+U 1 1 603C87F2
+P 4600 3750
+F 0 "DigiKey_450-1571-ND" H 4600 4033 50  0000 C CNN
+F 1 "SW_SP3T" H 4600 3942 50  0000 C CNN
+F 2 "" H 3975 3925 50  0001 C CNN
+F 3 "~" H 3975 3925 50  0001 C CNN
+	1    4600 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3550 5150 3550
+Wire Wire Line
+	5150 3550 5150 3650
+Wire Wire Line
+	5150 3650 4800 3650
+Wire Wire Line
+	5300 3750 4800 3750
+Wire Wire Line
+	5300 3950 5150 3950
+Wire Wire Line
+	5150 3950 5150 3850
+Wire Wire Line
+	5150 3850 4800 3850
+$Comp
+L Switch:SW_Push_LED Sparkfun_COM-09181
+U 1 1 603C7AF3
+P 5750 4950
+F 0 "Sparkfun_COM-09181" H 5750 5335 50  0000 C CNN
+F 1 "SW_Push_LED" H 5750 5244 50  0000 C CNN
+F 2 "" H 5750 5250 50  0001 C CNN
+F 3 "~" H 5750 5250 50  0001 C CNN
+	1    5750 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 4850 6250 4850
+Wire Wire Line
+	6250 4850 6250 4400
+Wire Wire Line
+	5550 4850 4050 4850
+Wire Wire Line
+	4400 4400 4400 3750
+Wire Wire Line
+	4400 4400 6250 4400
+$Comp
+L Switch:SW_SPDT DigiKey_EG1903-ND
+U 1 1 603C72ED
+P 7000 4850
+F 0 "DigiKey_EG1903-ND" H 7000 5135 50  0000 C CNN
+F 1 "SW_SPDT" H 7000 5044 50  0000 C CNN
+F 2 "" H 7000 4850 50  0001 C CNN
+F 3 "~" H 7000 4850 50  0001 C CNN
+	1    7000 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 3350 6400 3350
+Wire Wire Line
+	6400 3350 6400 4950
+Wire Wire Line
+	6400 4950 5950 4950
+Wire Wire Line
+	5550 4950 5550 5150
+Wire Wire Line
+	5550 5150 6800 5150
+Wire Wire Line
+	6800 5150 6800 4850
+Wire Wire Line
+	7200 4750 7450 4750
+Wire Wire Line
+	6200 3150 6650 3150
+Wire Wire Line
+	7450 4750 7450 4400
+Wire Wire Line
+	7450 4400 6650 4400
+Wire Wire Line
+	6650 4400 6650 3150
+Wire Wire Line
+	5300 3350 4050 3350
+Wire Wire Line
+	4050 3350 4050 4850
+$EndSCHEMATC
