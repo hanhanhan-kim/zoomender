@@ -2,7 +2,8 @@
 
 A simple plug-and-play device for ending Zoom calls—no software installation required! Will work for Linux, Windows, and Apple operating systems.
 
-![demo](docs/demo.gif)
+<!-- ![demo](docs/demo.gif) -->
+<img src="/docs/demo.gif" width="1080"/>
 
 ## Hardware
 
