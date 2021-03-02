@@ -2,7 +2,7 @@
 
 A simple plug-and-play device for ending Zoom calls—no software installation required! Will work for Linux, Windows, and Apple operating systems.
 
-#TODO: Add gif
+![demo](docs/demo.gif)
 
 ## Hardware
 
@@ -29,7 +29,7 @@ A literal schematic is shown below. The exact GND pins that were used are depict
 
 A complementary photograph:
 
-![photo](docs/hook_up_photo.jpg)
+![hook-up](docs/hook_up_photo.jpg)
 
 ### Assembly
 
@@ -38,7 +38,7 @@ A complementary photograph:
 3. Press-fit the push-button, switches and Pro Micro into their respective slots of the main body. If your print settings were well tuned, the components should fit snugly, without complaints. Otherwise, don’t be afraid to use some epoxy or hot glue. 
 4. Screw the base into the bottom of the main, via the printed threads. 
 
-#TODO: Attach photograph
+![assembled](docs/assembled.jpg)
 
 ## Firmware
 
