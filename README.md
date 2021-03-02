@@ -36,7 +36,7 @@ A complementary photograph:
 
 1. Print the [`main.stl`](/hardware/STLs/main.stl) and the [`base.stl`](/hardware/STLs/base.stl). I used the default settings for PLA at 0.2 um layer height on my Prusa MK3S. 
 2. Solder or crimp the connections together, as illustrated in the schematic. Making connections on the terminals of the small SPDT and SP3T switches can be a little tricky. I found that female crimp pins meant for 0.1” housing (like the kind you find on breadboard jumper cables) worked well, when combined with some solder. I then added some heat-shrink to prevent shorting the switch terminals. Alternatively, you can take a more professional approach.
-3. Press-fit the push-button, switches and Pro Micro into their respective slots of the main body. If your print settings were well tuned, the components should fit snugly, without complaints. Otherwise, don’t be afraid to use some epoxy or hot glue. 
+3. Press-fit the push-button, switches, and Pro Micro into their respective slots of the main body. If your print settings were well tuned, the components should fit snugly, without complaints. Otherwise, don’t be afraid to use some epoxy or hot glue. 
 4. Screw the base into the bottom of the main, via the printed threads. 
 
 ![assembled](docs/assembled.jpg)
